@@ -8,6 +8,9 @@
   font-size: 20px;
 }
 
+body{
+    overflow-x: hidden;
+}
 a {
   font-weight: 500;
   color: #646cff;
@@ -34,7 +37,7 @@ a {
     background-position: 0 100%
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar{ 
     width: 9px;
 }
 

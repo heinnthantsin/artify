@@ -21,8 +21,6 @@ function ProductDetail() {
           <path d="M8.99996 17C8.99996 17 4.00001 13.3176 4 12C3.99999 10.6824 9 7 9 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>} />
       </Link >
-
-
     </>
   )
 }
