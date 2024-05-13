@@ -40,6 +40,16 @@ import img30 from "../assets/img/arts folder/handcrafts/handcraft4.jpg"
 import img31 from "../assets/img/arts folder/handcrafts/handcraft5.jpg"
 import img32 from "../assets/img/arts folder/handcrafts/handcraft6.jpg"
 
+import img33 from '../assets/img/arts/face-photograph.jpg';
+import img45 from '../assets/img/arts/graffiti1.jpg';
+import img35 from '../assets/img/arts/flower-paint.jpg';
+import img36 from '../assets/img/arts/digital6.jpg';
+import img37 from '../assets/img/arts/digital7.jpg';
+import img38 from '../assets/img/arts/digital4.jpg';
+import img39 from '../assets/img/arts/digital5.jpg';
+import img40 from '../assets/img/arts/digital-3.jpg';
+import img41 from '../assets/img/arts/digital-flow.jpg';
+import img34 from '../assets/img/arts/myanmar15.jpg';
 
 
 
@@ -52,6 +62,14 @@ const productData = [
         artist: "Vinicius",
         price: "$500",
         category: "Painting",
+    },
+    {
+        id: 1,
+        img: img,
+        name: "Bloom",
+        artist: "Mia Leoni",
+        price: "$80",
+        category: "PhotoGraph",
         rating: 4
     },
     {
@@ -60,6 +78,10 @@ const productData = [
         name: "Ethereal Dreams",
         artist: "Sofia Chen",
         price: "$900",
+        img: img1,
+        name: "Pearls of Wisdom: A Portrait in Time",
+        artist: "Elise Chen",
+        price: "$65",
         category: "Painting",
         rating: 3
     },
@@ -339,8 +361,97 @@ const productData = [
         price: "$200",
         category: "Handcraft",
         rating: 3
-    }
+    },
 
+    {   id:33,
+        img: img33,
+        name: "Golden Glow of the Mandalay Court",
+        artist: "Elise Chen",
+        price: "$110",
+        category: "Painting",
+        rating: 5
+    },
+    {
+        id: 34,
+        img: img34,
+        name: "Whispers of the Monsoon Maiden",
+        artist: "Samuel Adler",
+        price: "$50",
+        category: "Painting",
+        rating: 5
+    },
+    {
+        id: 35,
+        img: img45,
+        name: "Graffiti Dreams",
+        artist: "Gabriel Silva",
+        price: "$88",
+        category: "Digital Art",
+        rating: 4
+    },
+    {
+        id: 36,
+        img: img35,
+        name: "Floral Symphony",
+        artist: "Samuel Adler",
+        price: "$150",
+        category: "Painting",
+        rating: 3
+    },
+    {
+        id: 37,
+        img: img36,
+        name: "Dance Freely With the wind",
+        artist: "Sofia Alvarez",
+        price: "$120",
+        category: "Digital Art",
+        rating: 4
+    },
+    {
+        id: 38,
+        img: img37,
+        name: "Soothing Silence",
+        artist: "Gabriel Silva",
+        price: "$77",
+        category: "Digital Art",
+        rating: 5
+    },
+    {
+        id: 39,
+        img: img38,
+        name: "Cyber Canvas",
+        artist: "Ethan Nguyen",
+        price: "$89",
+        category: "Digital Art",
+        rating: 2
+    },
+    {
+        id: 40,
+        img: img39,
+        name: "Glimmers of Grace",
+        artist: "Sofia Alvarez",
+        price: "$99",
+        category: "Digital Art",
+        rating: 4
+    },
+    {
+        id: 41,
+        img: img40,
+        name: "Scarlet Dreams",
+        artist: "Ethan Nguyen",
+        price: "$175",
+        category: "Digital Art",
+        rating: 5
+    },
+    {
+        id: 42,
+        img: img41,
+        name: "Flowing Abstraction",
+        artist: "Ethan Nguyen",
+        price: "$60",
+        category: "Digital Art",
+        rating: 5
+    },
 ]
 
 export default productData
