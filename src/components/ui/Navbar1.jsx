@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import img from '../../assets/logo/logo.png';
-
+import NavbarStyle from './Navbar.module.css';
+import LoginForm from '../form/LoginForm';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-  const NabarStyle = "link link-underline link-underline-color"
+  const NabarStyle = `${NavbarStyle.link} ${NavbarStyle.linkUnderline} ${NavbarStyle.linkUnderlineColor}`
   return (
-    <nav className='fixed top-0 w-screen bg-slate-100 z-40 flex justify-between px-8 items-center py-2'>
+    <nav className='fixed top-0 w-screen z-40 flex justify-between px-8 items-center py-2 bg-blue-gray-300'>
       <section className='flex items-center gap-4'>
         {/* menu */}
         <button className='text-3xl cursor-pointer lg:hidden' onClick={() => setIsOpen(!isOpen)} >
@@ -53,14 +55,13 @@ const Navbar = () => {
 
       {/* overlay */}
       {isOpen &&
-        <div className='fixed h-full w-screen lg:hidden bg-black/40 backdrop-blur-sm top-0 right-0'></div>
+        <div className='fixed h-screen w-screen lg:hidden bg-black/40 backdrop-blur-sm top-0 right-0' onClick={() => setIsOpen(!isOpen)}></div>
       }
 
       {/* menu side - drawer */}
-      <section className={isOpen ? ' text-black bg-white flex-col absolute left-0 top-0 h-screen p-8 gap-8z-50 w-[300px] duration-400' :
-        ' text-black bg-white flex-col absolute left-[-100%] top-0 h-screen p-8 gap-8z-50 w-[-300px] duration-400'
+      <section className={isOpen ? 'text-black bg-white flex-col absolute left-0 top-0 h-screen p-8 gap-8z-50 w-[300px] duration-400' :
+        ' text-black bg-white flex-col absolute left-[-100%] top-0 h-screen p-8 gap-8z-50 w-[-300px] duration-700'
       }>
-        {/* <  onClick={() => setIsOpen(false)} className='mt-0 mb-8 text-3xl cursor-pointer' /> */}
         <button onClick={() => setIsOpen(false)} className='mt-0 mb-8 text-3xl cursor-pointer' >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={24} height={24} color={"#000000"} fill={"none"}>
             <path d="M19.0005 4.99988L5.00045 18.9999M5.00045 4.99988L19.0005 18.9999" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -86,14 +87,12 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-
-
       </section>
 
       {/* Right */}
-      <section className='flex items-center gap-4'>
-        {/* cart icon */}
-        <button><svg
+      <div className='flex items-center gap-4'>
+        {/* profile icon */}
+        <button onClick={() => setIsLogin(!isLogin)}><svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           width={24}
@@ -103,8 +102,8 @@ const Navbar = () => {
           <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5" />
           <path d="M7.5 17C9.8317 14.5578 14.1432 14.4428 16.5 17M14.4951 9.5C14.4951 10.8807 13.3742 12 11.9915 12C10.6089 12 9.48797 10.8807 9.48797 9.5C9.48797 8.11929 10.6089 7 11.9915 7C13.3742 7 14.4951 8.11929 14.4951 9.5Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
         </svg></button>
-        {/* Profile Icon */}
-        <button> <svg
+        {/* cart Icon */}
+        <button onClick={() => setIsLogin(!isLogin)}> <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           width={24}
@@ -117,8 +116,12 @@ const Navbar = () => {
           <circle cx="10.5" cy="20.5" r="1.5" stroke="currentColor" strokeWidth="1.5" />
           <circle cx="17.5" cy="20.5" r="1.5" stroke="currentColor" strokeWidth="1.5" />
         </svg></button>
-      </section>
-
+      </div>
+      {
+        isLogin && <div className='fixed h-screen w-screen bg-black/40 backdrop-blur-sm top-0 right-0' onClick={() => setIsLogin(!isLogin)}></div>
+      }
+      {/* login form  */}
+      {isLogin && <LoginForm />}
     </nav>
 
   )

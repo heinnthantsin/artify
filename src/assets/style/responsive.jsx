@@ -1,6 +1,6 @@
 const style = {
     responsiveTitle: "lg:text-3xl md:text-3xl sm:text-lg mb-4 text-titleColor font-semibold",
-    responsiveContent: "lg:text-md md:text-sm sm:text-xs"
+    responsiveContent: "lg:text-md md:text-sm sm:text-xs sm:text-center md:text-center lg:text-left text-textColor"
 }
 
 export default style
