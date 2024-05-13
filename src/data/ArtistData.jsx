@@ -1,5 +1,5 @@
-import img from '../assets/img/arts/handmade_6.jpg';
-import img1 from '../assets/img/arts/handmade_7.jpg';
+import img from '../assets/img/arts/pic1.jpg';
+import img1 from '../assets/img/arts/pic2.jpg';
 
 
 const artistData = [
