@@ -6,7 +6,7 @@ function Event() {
   TabTitle("Artify | Event")
   return (
     <div>
-      <CardList />
+      {/* <CardList itemList={} /> */}
       
 
     </div>

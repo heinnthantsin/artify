@@ -9,12 +9,12 @@ import Star from "./Star";
 function Card({ name, img, artist, category, price, rating }) {
     const location = useLocation();
     return (
-        <div className="border border-cyan-200 rounded-lg h-fit">
-            <div className="bg-slate-200 w-full h-[235px] rounded-lg  overflow-hidden">
-                <img className="w-full h-full rounded-lg object-cover hover:scale-125 transition duration-700"
+        <div className="border border-deep-orange-600 rounded-lg p-2 h-fit">
+            <div className="bg-slate-200 w-full h-[235px] overflow-hidden">
+                <img className="w-full h-full rounded-t-lg object-cover hover:scale-125 transition duration-700"
                     src={img} alt="art" />
             </div>
-            <div className={`${style.responsiveContent} bg-white text-gray-600 px-4 py-4`}>
+            <div className={`${style.responsiveContent} text-textColor px-4 py-4`}>
                 {
                     location.pathname === "/artist" && (<div className="flex justify-between">
                         {artist && <span> {artist} </span>}
@@ -22,7 +22,7 @@ function Card({ name, img, artist, category, price, rating }) {
                     </div>)
                 }
                 {
-                    <span className="flex mb-2">
+                    <span className="flex mb-2 sm:justify-center">
                         <Star rating={rating} />
                     </span>
                 }
