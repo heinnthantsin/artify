@@ -13,7 +13,7 @@ const Navbar = () => {
   };
   const NabarStyle = `${NavbarStyle.link} ${NavbarStyle.linkUnderline} ${NavbarStyle.linkUnderlineColor}`
   return (
-    <nav className='fixed top-0 w-screen z-40 flex justify-between px-8 items-center py-2 bg-blue-gray-300'>
+    <nav className='fixed top-0 w-screen z-40 flex justify-between px-8 items-center py-2 bg-[#eae7dc]'>
       <section className='flex items-center gap-4'>
         {/* menu */}
         <button className='text-3xl cursor-pointer lg:hidden' onClick={() => setIsOpen(!isOpen)} >
@@ -31,8 +31,7 @@ const Navbar = () => {
       </section>
 
       <div className='hidden lg:flex'>
-        <ul className='flex items-center
-      gap-10'>
+        <ul className='flex items-center gap-10'>
           <li>
             <NavLink className={NabarStyle} to="/">Home</NavLink>
           </li>
