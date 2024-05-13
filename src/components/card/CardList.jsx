@@ -9,7 +9,6 @@ function CardList({ itemList }) {
     const home = location.pathname == "/"
     return (
         <>
-
             {!home && <h1 className={style.responsiveTitle}>{routeCheck(location.pathname)} List</h1>}
             {!home && (<div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 h-auto">
                 {itemList.map((item, index) => (

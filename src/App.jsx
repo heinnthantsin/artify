@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { TabTitle } from './utils/GeneralFunctions'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
@@ -15,14 +15,16 @@ import ArtistDetail from './pages/ArtistDetail'
 
 function App() {
   TabTitle("Artify | Home")
+  const [isLogin, setIsLogin] = useState(false);
   return (
     <>
       <BrowserRouter>
-        <header>
+        <header className='mb-7'>
           {/* <Navbar /> */}
           <Navbar1 />
         </header>
         <main className='bg-primary min-h-screen h-auto py-16 px-5 sm:px-10 md:px-14 lg:px-24 '>
+
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path='/product' element={<Product />} />
