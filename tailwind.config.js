@@ -13,7 +13,7 @@ module.exports = withMT({
         forest: "#204045",
         navColor: "#e9e6e4",
         textColor: "#333333",
-        titleColor: "#0047AB"
+        titleColor: "#494554"
       }
     },
   },

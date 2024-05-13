@@ -21,7 +21,8 @@ function App() {
         <header className='mb-7'>
           <Navbar1 />
         </header>
-        <main className='bg-[#eae7dc] min-h-screen h-auto py-16 px-5 sm:px-10 md:px-14 lg:px-24 '>
+        <main className='bg-[#faf8ff] min-h-screen h-auto py-16 px-5 sm:px-10 md:px-14 lg:px-24 '>
+
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path='/product' element={<Product />} />

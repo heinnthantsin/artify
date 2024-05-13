@@ -12,6 +12,7 @@ const HoverLink = ({ href, children }) => {
     setIsHovered(false);
   };
 
+
   return (
     <a
       href={href}
@@ -21,6 +22,7 @@ const HoverLink = ({ href, children }) => {
     >
       {children}
     </a>
+
 
   );
 };
@@ -46,7 +48,7 @@ export default function Footer() {
 
   return (
     <footer style={{
-      backgroundColor: '#eae7dc',
+      backgroundColor: '#d3d8e4',
       color: '#204045',
     }}>
       <div style={{
