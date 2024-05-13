@@ -13,7 +13,7 @@ const Navbar = () => {
   };
   const NabarStyle = `${NavbarStyle.link} ${NavbarStyle.linkUnderline} ${NavbarStyle.linkUnderlineColor}`
   return (
-    <nav className='fixed top-0 w-screen z-40 flex justify-between px-8 items-center py-2 bg-blue-gray-300'>
+    <nav className='fixed top-0 w-screen z-40 flex justify-between px-8 items-center py-2 bg-[#d3d8e4]'>
       <section className='flex items-center gap-4'>
         {/* menu */}
         <button className='text-3xl cursor-pointer lg:hidden' onClick={() => setIsOpen(!isOpen)} >

@@ -4,15 +4,15 @@ import Button from "../Button";
 export default function CarouselCustomNavigation() {
     const slides = [
         {
-            imageUrl: 'src/assets/img/arts/handmade_1.jpg',
+            imageUrl: 'src/assets/img/bg-home/hero-bg-1.jpg',
             buttonContent: 'Click Me 1',
         },
         {
-            imageUrl: 'src/assets/img/arts/handmade_3.jpg',
+            imageUrl: 'src/assets/img/bg-home/hero-bg-2.jpg',
             buttonContent: 'Click Me 2',
         },
         {
-            imageUrl: 'src/assets/img/arts/handmade_8.jpg',
+            imageUrl: 'src/assets/img/bg-home/hero-bg-3.jpg',
             buttonContent: 'Click Me 3',
         },
     ];

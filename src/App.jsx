@@ -23,7 +23,7 @@ function App() {
           {/* <Navbar /> */}
           <Navbar1 />
         </header>
-        <main className='bg-primary min-h-screen h-auto py-16 px-5 sm:px-10 md:px-14 lg:px-24 '>
+        <main className='bg-[#faf8ff] min-h-screen h-auto py-16 px-5 sm:px-10 md:px-14 lg:px-24 '>
 
           <Routes>
             <Route path="/" element={<Home />} />
