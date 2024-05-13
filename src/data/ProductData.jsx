@@ -64,8 +64,8 @@ const productData = [
         category: "Painting",
     },
     {
-        id: 1,
-        img: img,
+        id: 51,
+        img: img30,
         name: "Bloom",
         artist: "Mia Leoni",
         price: "$80",
@@ -78,10 +78,6 @@ const productData = [
         name: "Ethereal Dreams",
         artist: "Sofia Chen",
         price: "$900",
-        img: img1,
-        name: "Pearls of Wisdom: A Portrait in Time",
-        artist: "Elise Chen",
-        price: "$65",
         category: "Painting",
         rating: 3
     },
@@ -374,7 +370,7 @@ const productData = [
     {
         id: 34,
         img: img34,
-        name: "Whispers of the Monsoon Maiden",
+        name: "Whispers of the Monsoon",
         artist: "Samuel Adler",
         price: "$50",
         category: "Painting",
