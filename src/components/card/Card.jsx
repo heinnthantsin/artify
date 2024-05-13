@@ -9,7 +9,7 @@ import Star from "./Star";
 function Card({ name, img, artist, category, price, rating }) {
     const location = useLocation();
     return (
-        <div className="border border-deep-orange-600 rounded-lg p-2 h-fit">
+        <div className="border border-teal-400 rounded-lg p-2 h-fit">
             <div className="bg-slate-200 w-full h-[235px] overflow-hidden">
                 <img className="w-full h-full rounded-t-lg object-cover hover:scale-125 transition duration-700"
                     src={img} alt="art" />

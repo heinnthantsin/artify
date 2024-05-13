@@ -36,7 +36,7 @@ export default function CarouselCustomNavigation() {
                 slides.map((slide, index) => (
                     <div key={index} className="relative h-auto overflow-y-hidden">
                         <img src={slide.imageUrl} alt={`image ${index + 1}`} className="h-[80vh] w-full object-cover " />
-                        <Button customeClass="absolute bottom-10 left-1/2 transform -translate-x-1/2 translate-y-1/2 bg-white px-4 py-2 rounded-md shadow-md hover:text-cyan-500" buttonName={slide.buttonContent} />
+                        <Button customeClass="absolute bottom-10 left-1/2 transform -translate-x-1/2 translate-y-1/2  px-4 py-2 rounded-md shadow-md hover:text-cyan-500" buttonName={slide.buttonContent} />
                     </div>
                 ))
             }
