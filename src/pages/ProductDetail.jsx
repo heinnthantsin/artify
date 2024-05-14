@@ -9,7 +9,9 @@ import Detail from '../components/card/Detail'
 function ProductDetail() {
   const params = useParams();
   const productId = params.id;
-  const product = productData.find((product) => product.id == productId)
+  console.log("get prodcut ID", productId)
+  const product = productData.find((product) => product.id === productId)
+  console.log("get product", product)
   return (
     <>
       <Detail img={product?.img} artist={product?.artist} category={product?.category} price={product?.price} rating={product?.rating} productId={product?.id} />

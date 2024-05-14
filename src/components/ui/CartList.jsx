@@ -2,9 +2,11 @@ import React, { useState } from 'react'
 import Cart from './Cart'
 import Button from '../util/Button'
 import { Link } from 'react-router-dom'
+import { useCartStore } from '../../store/cart-store';
 
 
 function CartList({ isCartOpen, setIsCardOpen }) {
+    const cartStroe = useCartStore();
     return (
         <>
             {
@@ -24,7 +26,8 @@ function CartList({ isCartOpen, setIsCardOpen }) {
 
                 <div>
                     {
-                        <Cart />
+                        cartStroe.carts.length > 0 && (cartStroe.carts.map((item) => <Cart item={item} />))
+
                     }
                 </div>
                 <Link to="/checkout"><Button customeClass={"w-full"} buttonName={"Checkout"} /></Link>

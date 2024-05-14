@@ -5,6 +5,7 @@ import { TabTitle } from '../../utils/GeneralFunctions';
 import Button from '../util/Button';
 import Star from './Star';
 import CustomRatingIcon from '../util/CustomRatingIcon';
+import { useCartStore } from '../../store/cart-store';
 // import { useCartStore } from '../store/cart-store';
 
 
@@ -19,12 +20,8 @@ function Detail({ name, img, artist, category, price, rating, productId, artistI
             default: return ""
         }
     }
-    // const { carts, addCartItem, removeCartItem } = useCartStore(state => ({
-    //     cart: state.carts,
-    //     addCart: state.addCart,
-    //     removeCart: state.removeCart
-    // }));
-    console.log(location.pathname)
+
+    const cartStroe = useCartStore();
 
     return (
         <>
@@ -47,8 +44,17 @@ function Detail({ name, img, artist, category, price, rating, productId, artistI
 
                     {productRotue &&
                         <div className=''>
-                            <button> <Button customeClass={"w-[35%] block my-3"} buttonName={"Add to Cart"} /></button>
-                            <Button customeClass="w-[60%]" buttonName={"Place Order"} />
+                            <button onClick={() => cartStroe.addCartItem(
+                                {
+                                    productName: name,
+                                    price: price,
+                                    id: productId,
+                                    quantity: 1,
+                                    isHandcraft: category === "Handcraft"
+                                }
+                            )}><Button customeClass={"w-auto block my-3"} buttonName={"Add to Cart"} /></button>
+                            <Link to='/checkout'><Button customeClass="w-[60%]" buttonName={"Place Order"} />
+                            </Link>
                         </div>
                     }
                     {
@@ -56,7 +62,7 @@ function Detail({ name, img, artist, category, price, rating, productId, artistI
                             <><p className='mt-3 font-bold'>About Artist</p><p className='text-sm md:text-lg mt-3'>{` ${aboutArtist}`}</p></>)
                     }
                 </div>
-            </div>
+            </div >
         </>
     )
 }

@@ -10,7 +10,7 @@ const Navbar = () => {
   const [isLogin, setIsLogin] = useState(false);
   const [isCartOpen, setIsCardOpen] = useState(false);
   const pathName = useLocation().pathname;
-  const handleLogin = () => setIsLogin(!isLogin)
+  const handleLogin = () => setIsLogin(!isLogin);
 
   const navClass = `${NavbarStyle.link} ${NavbarStyle.linkUnderline} ${NavbarStyle.linkUnderlineColor}`
   return (
@@ -33,8 +33,8 @@ const Navbar = () => {
 
       <div className='hidden lg:flex'>
         <ul className='flex items-center gap-10'>
-          <li className={`${pathName.startsWith("/home") && 'border-b-4 pb-0.5 border-gray-700/60'}`}>
-            <NavLink className={`${navClass} font-bold`} to="/home">Home</NavLink>
+          <li className={`${pathName.startsWith("") && 'border-b-4 pb-0.5 border-gray-700/60'}`}>
+            <NavLink className={`${navClass} font-bold`} to="/">Home</NavLink>
           </li>
           <li className={`${pathName.startsWith("/product") && 'border-b-4 pb-0.5 border-gray-700/60'}`}>
             <NavLink className={`${navClass} font-bold`} to="/product">Arts</NavLink>

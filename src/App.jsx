@@ -25,8 +25,8 @@ function App() {
         </header>
         <main className='bg-[#faf8ff] min-h-screen h-auto py-16 px-5 sm:px-10 md:px-14 '>
           <Routes>
-            <Route path="/" element={<Navigate to="/home" />} />
-            <Route path="/home" element={<Home />} />
+            {/* <Route path="/" element={<Navigate to="/" />} /> */}
+            <Route path="/" element={<Home />} />
             <Route path='/product' element={<Product />} />
             <Route path='/product/:id' element={<ProductDetail />} />
             <Route path='/event' element={<Event />} />

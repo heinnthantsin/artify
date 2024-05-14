@@ -35,7 +35,7 @@ function Card({ img, name, artist, category, price, rating }) {
             {isHovered &&
                 <div className="flex justify-between items-center px-3 pt-2" style={hoverBox}>
                     <div className="flex-1">
-                        {location.pathname === "/artist" && (
+                        {!price && (
                             <div className="flex justify-between">
                                 {artist && <span className="text-md text-[#204045] montserrat font-bold pb-1"> {artist} </span>}
                                 {category && <span className="text-md text-[#204045] montserrat font-bold pb-1">{category} </span>}
@@ -46,10 +46,10 @@ function Card({ img, name, artist, category, price, rating }) {
                                 <Star rating={rating} />
                             </span>
                             {name && <p className="text-md text-[#204045] montserrat font-semibold pb-1">{name}</p>}
-                            {price && <p className="text-md text-[#204045] montserrat font-semibold space-x-2">{price}</p>}
+                            {price && <p className="text-md text-[#204045] montserrat font-semibold space-x-2">${price}</p>}
                         </div>
                     </div>
-                    {location.pathname !== "/artist" && (
+                    {price && (
 
                         <svg
                             version="1.1"

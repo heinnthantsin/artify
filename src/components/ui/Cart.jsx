@@ -1,16 +1,44 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import Button from '../util/Button'
+import { useCartStore } from '../../store/cart-store';
 
-function Cart() {
+
+// const quantityController = (qty) => {
+//     const [inputQty, SetInputQty] = useState(qty);
+//     useEffect(() => {
+//         SetInputQty(qty)
+//     }, [inputQty])
+//     return (
+//         <>
+
+//         </>)
+// }
+
+function Cart({ item }) {
+    const cartStore = useCartStore();
+    const [qty, setQty] = useState(item.quantity);
+
+    useEffect(() => {
+        cartStore.replacedItem({
+            ...item,
+            quantity: item.quantity
+        })
+    }, [qty])
+
     return (
         <>
             <div className='w-full h-full'>
                 <div className='w-[30%] h-[30%]'>
-                    {/* <img src="src\assets\img\artist\profile7.jpg" className='object-scale-down' /> */}
+                    <img src={item.img} className='object-scale-down' />
                 </div>
                 <div>
-                    <h1>Product Name</h1>
-                    <p>Price: $50</p>
-                    <b>Quantity : 1</b>
+                    <h1>{item.productName}</h1>
+                    <p>Price: ${item.price}</p>
+                    {item.isHandcraft && (<>
+                        <Button customeClass={""} buttonName={"-"} />
+                        <input type="text" value={qty} onChange={(val) => setQty(val)} />
+                        <Button customeClass={""} buttonName={"+"} />
+                    </>)}
                 </div>
             </div>
         </>
