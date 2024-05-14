@@ -51,7 +51,12 @@ import img40 from '../assets/img/arts/digital-3.jpg';
 import img41 from '../assets/img/arts/digital-flow.jpg';
 import img34 from '../assets/img/arts/myanmar15.jpg';
 
+// myan artist
 
+import img52 from '../assets/img/arts folder/arts/htein_Lin_art1.jpg'
+import img53 from '../assets/img/arts folder/arts/htein_lin_art2.jpg'
+import img54 from '../assets/img/arts folder/arts/u_lun_gywe_art1.jpg'
+import img55 from '../assets/img/arts folder/arts/u_lun_gywe_art2.jpg'
 
 
 const productData = [
@@ -64,8 +69,8 @@ const productData = [
         category: "Painting",
     },
     {
-        id: 1,
-        img: img,
+        id: 51,
+        img: img30,
         name: "Bloom",
         artist: "Mia Leoni",
         price: "$80",
@@ -78,10 +83,6 @@ const productData = [
         name: "Ethereal Dreams",
         artist: "Sofia Chen",
         price: "$900",
-        img: img1,
-        name: "Pearls of Wisdom: A Portrait in Time",
-        artist: "Elise Chen",
-        price: "$65",
         category: "Painting",
         rating: 3
     },
@@ -285,7 +286,7 @@ const productData = [
         name: "Garden Bowl",
         artist: "Mei Lin",
         price: "$2700",
-        category:"Ceramic",
+        category: "Ceramic",
         rating: 4
     },
     {
@@ -363,7 +364,8 @@ const productData = [
         rating: 3
     },
 
-    {   id:33,
+    {
+        id: 33,
         img: img33,
         name: "Golden Glow of the Mandalay Court",
         artist: "Elise Chen",
@@ -374,7 +376,7 @@ const productData = [
     {
         id: 34,
         img: img34,
-        name: "Whispers of the Monsoon Maiden",
+        name: "Whispers of the Monsoon",
         artist: "Samuel Adler",
         price: "$50",
         category: "Painting",
@@ -450,6 +452,42 @@ const productData = [
         artist: "Ethan Nguyen",
         price: "$60",
         category: "Digital Art",
+        rating: 5
+    },
+    {
+        id: 52,
+        img: img52,
+        name: "Torture Phone",
+        artist: "U Htein Lin",
+        price: "$2500",
+        category: "Paintings",
+        rating: 5
+    },
+    {
+        id: 53,
+        img: img53,
+        name: "Monk Series",
+        artist: "U Htein Lin",
+        price: "$2700",
+        category: "Paintings",
+        rating: 5
+    },
+    {
+        id: 54,
+        img: img54,
+        name: "Seated Lady",
+        artist: "U Lun Gywe",
+        price: "$1600",
+        category: "Paintings",
+        rating: 5
+    },
+    {
+        id: 55,
+        img: img55,
+        name: "Market Scene",
+        artist: "U Lun Gywe",
+        price: "$2500",
+        category: "Paintings",
         rating: 5
     },
 ]

@@ -13,7 +13,7 @@ function ProductDetail() {
     const artist = ArtistData.find((artist) => artist.id == artistId)
     return (
         <>
-            <Detail img={artist?.img} aboutArtist={artist?.aboutArtist} artist={artist?.artist} category={artist?.category} artistId={artist?.id} />
+            <Detail img={artist?.img} aboutArtist={artist?.about} artist={artist?.artist} category={artist?.category} artistId={artist?.id} />
 
             <FollowingList itemList={productData} sectionTitle={"Artist's Works"} />
             <Link to="/product"><Button customeClass="w-auto" buttonName={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={24} height={24} color={"#000000"} fill={"none"}>

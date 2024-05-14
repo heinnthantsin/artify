@@ -25,7 +25,7 @@ function FollowingList({ itemList, sectionTitle }) {
     }
 
     const CheckRoute = () => {
-        return (<div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 h-auto">
+        return (<div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 h-auto">
             {itemList.map((item) => (
                 <button className="w-full" key={item.id} onClick={() => goDetail(item.id)} >
                     <Card

@@ -18,10 +18,10 @@ function Detail({ name, img, artist, category, price, rating, productId, artistI
     return (
         <>
             <h1 className={style.responsiveTitle}>{routeCheck(location.pathname)} Detail</h1>
-            <div className='flex flex-col lg:flex-row border border-gray-400 gap-5 sm:flex-col md:align-center rounded-md  p-4 max-w-[900px] mx-auto'>
+            <div className='flex flex-col lg:flex-row border border-gray-400 gap-5 sm:flex-col md:align-center rounded-md p-3 max-w-[900px] mx-auto'>
                 <div>
-                    <img src={img} alt="details" className='min-h-[400px] md:min-h-[400px]
-                 md:min-w-[400px]  object-cover rounded-xl' />
+                    <img src={img} alt="details" className='min-h-[400px] max-w-[300px]
+                    md:min-w-[400px]  object-cover rounded-xl' />
                 </div>
                 <div className='mt-4 text-textColor text-center lg:text-left w-full'>
                     {name && <div className='my-3'> <b>Product Name :</b> {name}</div>}
@@ -32,7 +32,7 @@ function Detail({ name, img, artist, category, price, rating, productId, artistI
                     {location.pathname == `/product/${productId}` && <Button customeClass="w-[50%] mx-auto" buttonName={"Place Order"} />}
                     {
                         aboutArtist && (
-                            <><p className='mt-3 font-bold'>About Artist</p><p className='text-sm mt-3'>{` ${aboutArtist}`}</p></>)
+                            <><p className='mt-3 font-bold'>About Artist</p><p className='text-sm md:text-lg mt-3'>{` ${aboutArtist}`}</p></>)
                     }
                 </div>
             </div>

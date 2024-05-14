@@ -15,12 +15,10 @@ import ArtistDetail from './pages/ArtistDetail'
 
 function App() {
   TabTitle("Artify | Home")
-  const [isLogin, setIsLogin] = useState(false);
   return (
     <>
       <BrowserRouter>
         <header className='mb-7'>
-          {/* <Navbar /> */}
           <Navbar1 />
         </header>
         <main className='bg-[#faf8ff] min-h-screen h-auto py-16 px-5 sm:px-10 md:px-14 lg:px-24 '>

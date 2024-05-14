@@ -20,7 +20,7 @@ function Home() {
         <WhatYouCanDo />
       </section>
       <section className='min-h-[80vh] my-10 px-5'>
-        <h1 className={`${style.responsiveTitle} lg:mb-10 mb-8 text-center `}>Popular Product</h1>
+        <h1 className={`${style.responsiveTitle} lg:mb-10 mb-8 text-center`}>Popular Product</h1>
         <div>
           <CardList itemList={productData} />
         </div>
