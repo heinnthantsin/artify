@@ -65,7 +65,7 @@ const productData = [
     },
     {
         id: 1,
-        img: img,
+        img: img34,
         name: "Bloom",
         artist: "Mia Leoni",
         price: "$80",
