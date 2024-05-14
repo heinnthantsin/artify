@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../components/Button'
+import Button from '../components/util/Button'
 import { Link } from 'react-router-dom'
 import productData from '../data/ProductData'
 import FollowingList from '../components/card/FollowingList'

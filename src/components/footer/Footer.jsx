@@ -1,5 +1,7 @@
+import { Input } from "@material-tailwind/react";
 import React from "react";
 import { useState } from "react";
+import Button from "../util/Button";
 
 const HoverLink = ({ href, children }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -28,23 +30,23 @@ const HoverLink = ({ href, children }) => {
 };
 
 export default function Footer() {
-  const [isHovered, setIsHovered] = useState(false);
+  // const [isHovered, setIsHovered] = useState(false);
 
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
+  // const handleMouseEnter = () => {
+  //   setIsHovered(true);
+  // };
 
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
-  const buttonStyle = {
-    background: isHovered ? 'grey' : '#204045',
-    color: 'white',
-    padding: '10px 20px',
-    borderRadius: '5px',
-    transition: 'background 0.3s',
-    cursor: 'pointer',
-  };
+  // const handleMouseLeave = () => {
+  //   setIsHovered(false);
+  // };
+  // const buttonStyle = {
+  //   background: isHovered ? 'grey' : '#204045',
+  //   color: 'white',
+  //   padding: '10px 20px',
+  //   borderRadius: '5px',
+  //   transition: 'background 0.3s',
+  //   cursor: 'pointer',
+  // };
 
   return (
     <footer style={{
@@ -64,8 +66,8 @@ export default function Footer() {
 
         <div style={{ flex: '1 1 25%', marginBottom: '20px' }}>
           <div id="footer-logo-container">
-            <img src="D:\Desktop\HND-50\Web contest\next-app\src\images\logo.png" alt="Logo image" style={{ marginBottom: '10px' }} />
-            <p style={{ marginBottom: '10px', lineHeight: '2' }}>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
+            <img src="src\assets\logo\logo.png" alt="Logo image" style={{ marginBottom: '10px' }} className="min-w-[100px] max-w-[40px]" />
+            {/* <p style={{ marginBottom: '10px', lineHeight: '2' }}>`</p> */}
             <div style={{ display: 'flex', gap: '13px' }}>
 
               <a href="#">
@@ -118,20 +120,13 @@ export default function Footer() {
               <path d="M9 21C9.79613 21.6219 10.8475 22 12 22C13.1525 22 14.2039 21.6219 15 21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>Subscribe Artify </p>
           <p style={{ marginBottom: '10px', lineHeight: '2' }}>Subscribe and we will sent the latest updates to your email.</p>
-          <input type="email" placeholder="Enter your email" style={{
-            width: 'auto',
-            padding: '10px',
-            marginBottom: '10px',
-            border: '1px solid #ccc',
-            borderRadius: '5px'
-          }} />
-          <button style={buttonStyle}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          >Subscribe</button>
+          <div className="flex">
+            <Input type="Name" label="Enter Your Email" />
+            <Button customeClass={"py-10"} buttonName={"Subscribe"} />
+          </div>
         </div>
         {/* Contact Information */}
-        <div style={{ flex: '1 1 20%', marginBottom: '20px', marginleft: '30px' }}>
+        <div style={{ flex: '1 1 20%', marginBottom: '20px', marginLeft: '30px' }}>
           <div className="contact-info">
             <h3 style={{ marginBottom: '10px', fontWeight: 'bold', textTransform: 'uppercase' }}>Keep in touch</h3>
             <p style={{ display: 'flex', gap: '10px', paddingBottom: '20px' }}>
@@ -142,12 +137,12 @@ export default function Footer() {
               </svg>
               Phone: +95 1234567890
             </p>
-            <p style={{ display: 'flex', gap: '10px' }}>
+            <p style={{ display: 'flex', gap: '6px' }}>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#204045" fill="none">
                 <path d="M2 6L8.91302 9.91697C11.4616 11.361 12.5384 11.361 15.087 9.91697L22 6" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
                 <path d="M2.01577 13.4756C2.08114 16.5412 2.11383 18.0739 3.24496 19.2094C4.37608 20.3448 5.95033 20.3843 9.09883 20.4634C11.0393 20.5122 12.9607 20.5122 14.9012 20.4634C18.0497 20.3843 19.6239 20.3448 20.7551 19.2094C21.8862 18.0739 21.9189 16.5412 21.9842 13.4756C22.0053 12.4899 22.0053 11.5101 21.9842 10.5244C21.9189 7.45886 21.8862 5.92609 20.7551 4.79066C19.6239 3.65523 18.0497 3.61568 14.9012 3.53657C12.9607 3.48781 11.0393 3.48781 9.09882 3.53656C5.95033 3.61566 4.37608 3.65521 3.24495 4.79065C2.11382 5.92608 2.08114 7.45885 2.01576 10.5244C1.99474 11.5101 1.99475 12.4899 2.01577 13.4756Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
               </svg>
-              Email: artify@example.com</p>
+              Email: artify@gmail.com</p>
           </div>
         </div>
       </div>

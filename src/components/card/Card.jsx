@@ -8,15 +8,15 @@ function Card({ img, name, artist, category, price, rating }) {
     const location = useLocation();
     const [isHovered, setIsHovered] = useState(false);
     const hoverBox = {
-        width: ' 100 %',
+        width: '100%',
         position: 'absolute',
-        bottom: ' 0',
+        bottom: '0',
         opacity: isHovered ? '1' : '0',
         backgroundColor: '#3933339a',
-        backdropFilter: ' blur(9px)',
+        backdropFilter: 'blur(5px)',
         color: '#fff',
         letterSpacing: '2px',
-        transition: ' all 0.5s'
+        transition: 'all 0.5s'
     }
     const handleMouseEnter = () => {
         setIsHovered(true);
@@ -33,7 +33,7 @@ function Card({ img, name, artist, category, price, rating }) {
                     src={img} alt="art" />
             </div>
             {isHovered &&
-                <div className={`${style.responsiveContent} text-textColor px-4 py-4`} style={hoverBox}>
+                <div className={`${style.responsiveContent} text-textColor px-4 py-2`} style={hoverBox}>
                     {
                         location.pathname === "/artist" && (<div className="flex justify-between">
                             {artist && <span> {artist} </span>}

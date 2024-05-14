@@ -21,7 +21,7 @@ const artistData = [
         id: 1,
         img: img1,
         artist: "Jane Smith",
-        category: "Art(Paint)",
+        category: "Painting",
         about: "Jane Smith is a talented oil painter known for her vibrant landscapes and expressive brushwork. She draws inspiration from nature, often spending hours outdoors capturing the play of light and shadow. Her works have been exhibited in galleries across the country and have garnered praise for their emotive power and technical skill."
     },
     {
@@ -35,7 +35,7 @@ const artistData = [
         id: 3,
         img: img3,
         artist: "Ethan Nguyen",
-        category: "Art (Paint)",
+        category: "Painting",
         about: "Ethan Nguyen is a painter known for his vibrant abstract artworks. With bold brushstrokes and a dynamic color palette, he creates visual experiences that resonate with emotion and energy. Ethan's paintings invite viewers to explore the depths of their own imagination and emotions."
     },
     {
@@ -64,7 +64,7 @@ const artistData = [
         id: 7,
         img: img7,
         artist: "Grace",
-        category: "Photography",
+        category: "Photograph",
         about: "Grace Wilson is a photographer known for her evocative portraits and documentary-style photography. With a passion for storytelling, she captures the essence of her subjects with honesty and empathy. Grace's photography has been featured in exhibitions and publications, shining a light on social issues and human experiences."
     },
     {
@@ -78,7 +78,7 @@ const artistData = [
         id: 9,
         img: img9,
         artist: "Ethan",
-        category: "Art (Paint)",
+        category: "Painting",
         about: "Ethan Nguyen is a painter known for his vibrant abstract artworks. With bold brushstrokes and a dynamic color palette, he creates visual experiences that resonate with emotion and energy. Ethan's paintings invite viewers to explore the depths of their own imagination and emotions."
     },
     {
@@ -92,7 +92,7 @@ const artistData = [
         id: 11,
         img: img11,
         artist: "Liam",
-        category: "Photography",
+        category: "Photograph",
         about: "Liam Brown is a photographer known for his stunning landscape photography. With a deep appreciation for nature's beauty, he travels to remote locations to capture the majesty of the natural world. Liam's photographs evoke a sense of wonder and awe, inviting viewers to connect with the world around them."
     },
     {

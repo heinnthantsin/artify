@@ -1,12 +1,16 @@
-import React from 'react'
-import { useLocation } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import style from '../../assets/style/responsive';
 import { TabTitle } from '../../utils/GeneralFunctions';
-import Button from '../Button';
+import Button from '../util/Button';
 import Star from './Star';
+import CustomRatingIcon from '../util/CustomRatingIcon';
+// import { useCartStore } from '../store/cart-store';
+
 
 function Detail({ name, img, artist, category, price, rating, productId, artistId, aboutArtist }) {
     const location = useLocation();
+    const productRotue = location.pathname.startsWith('/product');
     TabTitle(`Artify | Details`)
     const routeCheck = (route) => {
         switch (route) {
@@ -15,6 +19,13 @@ function Detail({ name, img, artist, category, price, rating, productId, artistI
             default: return ""
         }
     }
+    // const { carts, addCartItem, removeCartItem } = useCartStore(state => ({
+    //     cart: state.carts,
+    //     addCart: state.addCart,
+    //     removeCart: state.removeCart
+    // }));
+    console.log(location.pathname)
+
     return (
         <>
             <h1 className={style.responsiveTitle}>{routeCheck(location.pathname)} Detail</h1>
@@ -25,11 +36,21 @@ function Detail({ name, img, artist, category, price, rating, productId, artistI
                 </div>
                 <div className='mt-4 text-textColor text-center lg:text-left w-full'>
                     {name && <div className='my-3'> <b>Product Name :</b> {name}</div>}
-                    {artist && <div className='my-3'> <b>Artist :</b> {artist}</div>}
+                    {artist && <div className='my-3'>  <b>Artist :</b> {artist}</div>}
                     {category && <div className='my-3'> <b>Art Type :</b> {category}</div>}
-                    {price && <div className="my-3"> <b>Price :</b>  {price}</div>}
                     {rating && <div className='mb-5 flex items-center justify-center lg:justify-start'><b>Rating :</b> {<Star rating={rating} />}</div>}
-                    {location.pathname == `/product/${productId}` && <Button customeClass="w-[50%] mx-auto" buttonName={"Place Order"} />}
+                    <div className='flex gap-7 mb-3'>
+                        {price && <div className="text-4xl font-semibold">${price}</div>}
+
+                    </div>
+                    {productRotue && <div className='w-fit'><CustomRatingIcon /></div>}
+
+                    {productRotue &&
+                        <div className=''>
+                            <button> <Button customeClass={"w-[35%] block my-3"} buttonName={"Add to Cart"} /></button>
+                            <Button customeClass="w-[60%]" buttonName={"Place Order"} />
+                        </div>
+                    }
                     {
                         aboutArtist && (
                             <><p className='mt-3 font-bold'>About Artist</p><p className='text-sm mt-3'>{` ${aboutArtist}`}</p></>)

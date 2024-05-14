@@ -22,7 +22,7 @@ export default function ContactUsForm() {
                     <Input type="Name" label="Your Name" />
                     <Textarea size="lg" label="Description" />
                 </div>
-                <Button className="mt-6" fullWidth>
+                <Button className="mt-6 bg-[#008080] hover:bg-transparent hover:text-[#008080] hover:border-1 border-[#008080]" fullWidth>
                     Send
                 </Button>
             </form>
