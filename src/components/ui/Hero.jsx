@@ -5,15 +5,15 @@ export default function CarouselCustomNavigation() {
     const slides = [
         {
             imageUrl: 'src/assets/img/bg-home/hero-bg-1.jpg',
-            buttonContent: 'Click Me 1',
+            buttonContent: 'Explore Arts',
         },
         {
             imageUrl: 'src/assets/img/bg-home/hero-bg-2.jpg',
-            buttonContent: 'Click Me 2',
+            buttonContent: 'Explore Artists',
         },
         {
             imageUrl: 'src/assets/img/bg-home/hero-bg-3.jpg',
-            buttonContent: 'Click Me 3',
+            buttonContent: 'Upcoming Events',
         },
     ];
 

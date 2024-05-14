@@ -53,7 +53,7 @@ function Detail({ name, img, artist, category, price, rating, productId, artistI
                     }
                     {
                         aboutArtist && (
-                            <><p className='mt-3 font-bold'>About Artist</p><p className='text-sm mt-3'>{` ${aboutArtist}`}</p></>)
+                            <><p className='mt-3 font-bold'>About Artist</p><p className='text-sm md:text-lg mt-3'>{` ${aboutArtist}`}</p></>)
                     }
                 </div>
             </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Link, NavLink, useLocation } from 'react-router-dom';
-import img from '../../assets/logo/logo.png';
+import { Link, NavLink } from 'react-router-dom';
+import img from '../../assets/logo/logo.jpg';
 import NavbarStyle from './Navbar.module.css';
 import LoginForm from '../form/LoginForm';
 import CartList from './CartList';
@@ -27,7 +27,7 @@ const Navbar = () => {
 
         {/* logo */}
         <div className='sm:w-[80px]'>
-          <Link to="/"><img className="object-contain h-[60px] md:w-full" src={img} alt="art" /></Link>
+          <Link to="/"><p className='montserrat md:p-2 text-[#182b2e] font-bold text-xl tracking-wide'>Artify</p></Link>
         </div>
       </section>
 
