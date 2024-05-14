@@ -32,7 +32,7 @@ function Detail({ name, img, artist, category, price, rating, productId, artistI
                     {location.pathname == `/product/${productId}` && <Button customeClass="w-[50%] mx-auto" buttonName={"Place Order"} />}
                     {
                         aboutArtist && (
-                            <><p className='mt-3 font-bold'>About Artist</p><p className='text-sm mt-3'>{` ${aboutArtist}`}</p></>)
+                            <><p className='mt-3 font-bold'>About Artist</p><p className='text-sm md:text-lg mt-3'>{` ${aboutArtist}`}</p></>)
                     }
                 </div>
             </div>

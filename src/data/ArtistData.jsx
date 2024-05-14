@@ -1,3 +1,7 @@
+import img17 from '../assets/img/artist/htein_lin.jpg'
+import img18 from '../assets/img/artist/u_lun_gywe.jpg'
+
+
 import img1 from '../assets/img/artist/profile1.jpg';
 import img2 from '../assets/img/artist/profile2.jpg';
 import img3 from '../assets/img/artist/profile3.jpg';
@@ -129,6 +133,20 @@ const artistData = [
         artist: "Sophie",
         category: "Digital Art",
         about: "Sophie Martinez is a digital artist known for her innovative use of technology in art. Blending elements of virtual reality and augmented reality, she creates immersive experiences that challenge perceptions of reality and identity. Sophie's digital artworks explore themes of consciousness, connectivity, and the human experience."
+    },
+    {
+        id: 17,
+        img: img17,
+        artist: "Htein Lin",
+        category: "Painter",
+        about: "Burmese painter, performance artist, and activist."
+    },
+    {
+        id: 18,
+        img: img18,
+        artist: "Lun Gywe",
+        category: "Painter",
+        about: "Burmese painter who works in oil and watercolor. Outside of Myanmar his work has been exhibited, often in solo shows, in Japan, the Republic of Korea, the People's Republic of China, Australia, New York City, the Republic of Singapore"
     }
 
 ]

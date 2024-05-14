@@ -7,15 +7,15 @@ export default function CarouselCustomNavigation() {
     const slides = [
         {
             imageUrl: 'src/assets/img/bg-home/hero-bg-1.jpg',
-            buttonContent: 'Click Me 1',
+            buttonContent: 'Explore Arts',
         },
         {
             imageUrl: 'src/assets/img/bg-home/hero-bg-2.jpg',
-            buttonContent: 'Click Me 2',
+            buttonContent: 'Explore Artists',
         },
         {
             imageUrl: 'src/assets/img/bg-home/hero-bg-3.jpg',
-            buttonContent: 'Click Me 3',
+            buttonContent: 'Upcoming Events',
         },
     ];
     const [activeIndex, setActiveIndex] = useState(0);
@@ -63,7 +63,7 @@ export default function CarouselCustomNavigation() {
                     {new Array(length).fill('').map((_, i) => (
                         <span
                             key={i}
-                            className={`block h-1 cursor-pointer rounded-2xl transition-all ${activeIndex === i ? 'w-8 bg-white' : 'w-4 bg-white/50'
+                            className={`block h-1.5 cursor-pointer rounded-2xl transition-all ${activeIndex === i ? 'w-9 bg-white' : 'w-4 bg-white/50'
                                 }`}
                             onClick={() => setActiveIndex(i)}
                         />
