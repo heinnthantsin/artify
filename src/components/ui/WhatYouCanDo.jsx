@@ -1,16 +1,16 @@
 import React from 'react'
 import style from '../../assets/style/responsive'
 
-function WhatYouCanDo() {
+function WhatYouCanDo({ sectionTitle }) {
     return (
         <>
-            <h1 className={`${style.responsiveTitle} text-center lg:mb-10 mb-8`}>What You Can Do</h1>
+            <h1 className={`${style.responsiveTitle} text-center lg:mb-10 mb-8`}>{sectionTitle}</h1>
             <div className='flex flex-col sm:flex-col lg:flex-row sm:gap-5  md:align-center sm:min-h-[600px]:'>
                 <div className=' lg:w-[50%] text-justify h-full '>
-                    <p className={`${style.responsiveContent} text-justify`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat consequatur nostrum deserunt ut libero ducimus delectus ex magni odit, autem officia, eius quidem, dolor nihil architecto beatae pariatur suscipit quod illo iusto? Corrupti voluptates ea quae in temporibus officiis reiciendis?</p>
+                    <p className={`${style.responsiveContent} text-justify leading-9`}>Artify offers a curated collection of original artworks, including paintings, sculptures, photography, and digital art, crafted by talented artists worldwide. Additionally, we provide a variety of handcrafted goods such as jewelry, ceramics, textiles, and home decor, ensuring each piece is unique and meticulously made. We also host exciting art events, from gallery openings and art fairs to workshops and artist meet-and-greets, designed to inspire, educate, and connect both artists and art lovers.</p>
                 </div>
                 <div className='lg:w-[50%] h-[50vh] sm:min-h-[50vh] rounded-2xl'>
-                    <img className='w-full h-full object-cover rounded-lg' src="src\assets\img\arts\gallary_landscape.jpg" />
+                    <img className='w-full h-full object-cover rounded-lg' src="src\assets\img\passion.jpg" />
                 </div>
             </div >
         </>
