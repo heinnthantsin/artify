@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import img from '../../assets/logo/logo.png';
+import { Link, NavLink, useLocation } from 'react-router-dom';
+import img from '../../assets/logo/logo.jpg';
 import NavbarStyle from './Navbar.module.css';
 import LoginForm from '../form/LoginForm';
+import CartList from './CartList';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
+  const [isCartOpen, setIsCardOpen] = useState(false);
+  const pathName = useLocation().pathname;
+  const handleLogin = () => setIsLogin(!isLogin)
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-  const NabarStyle = `${NavbarStyle.link} ${NavbarStyle.linkUnderline} ${NavbarStyle.linkUnderlineColor}`
+  const navClass = `${NavbarStyle.link} ${NavbarStyle.linkUnderline} ${NavbarStyle.linkUnderlineColor}`
   return (
     <nav className='fixed top-0 w-screen z-40 flex justify-between px-8 items-center py-2 bg-[#d3d8e4]'>
       <section className='flex items-center gap-4'>
@@ -26,27 +27,26 @@ const Navbar = () => {
 
         {/* logo */}
         <div className='sm:w-[80px]'>
-          <Link to="/"><img className="object-contain h-[60px] md:w-full" src={img} alt="art" /></Link>
+          <Link to="/"><p className='montserrat md:p-2 text-[#182b2e] font-bold text-xl tracking-wide'>Artify</p></Link>
         </div>
       </section>
 
       <div className='hidden lg:flex'>
-        <ul className='flex items-center
-      gap-10'>
-          <li>
-            <NavLink className={NabarStyle} to="/">Home</NavLink>
+        <ul className='flex items-center gap-10'>
+          <li className={`${pathName.startsWith("/home") && 'border-b-4 pb-0.5 border-gray-700/60'}`}>
+            <NavLink className={`${navClass} font-bold`} to="/home">Home</NavLink>
           </li>
-          <li>
-            <NavLink className={NabarStyle} to="/product">Product</NavLink>
+          <li className={`${pathName.startsWith("/product") && 'border-b-4 pb-0.5 border-gray-700/60'}`}>
+            <NavLink className={`${navClass} font-bold`} to="/product">Arts</NavLink>
           </li>
-          <li>
-            <NavLink className={NabarStyle} to="/artist">Artist</NavLink>
+          <li className={`${pathName.startsWith("/artist") && 'border-b-4 pb-0.5 border-gray-700/60'}`}>
+            <NavLink className={`${navClass} font-bold`} to="/artist">Artists</NavLink>
           </li>
-          <li>
-            <NavLink className={NabarStyle} to="/event">Event</NavLink>
+          <li className={`${pathName.startsWith("/event") && 'border-b-4 pb-0.5 border-gray-700/60'}`}>
+            <NavLink className={`${navClass} font-bold`} to="/event">Event</NavLink>
           </li>
-          <li>
-            <NavLink className={NabarStyle} to="/contactus">Contact Us</NavLink>
+          <li className={`${pathName.startsWith("/contactus") && 'border-b-4 pb-0.5 border-gray-700/60'}`}>
+            <NavLink className={`${navClass} font-bold`} to="/contactus">Contact Us</NavLink>
           </li>
         </ul>
       </div>
@@ -54,7 +54,8 @@ const Navbar = () => {
       {/* sidebar mobile menu */}
 
       {/* overlay */}
-      {isOpen &&
+      {
+        isOpen &&
         <div className='fixed h-screen w-screen lg:hidden bg-black/40 backdrop-blur-sm top-0 right-0' onClick={() => setIsOpen(!isOpen)}></div>
       }
 
@@ -74,10 +75,10 @@ const Navbar = () => {
               <NavLink className="" to="/" onClick={() => setIsOpen(!isOpen)}>Home</NavLink>
             </li>
             <li className='py-3 border-b-2'>
-              <NavLink className="" to="/product" onClick={() => setIsOpen(!isOpen)}>Product</NavLink>
+              <NavLink className="" to="/product" onClick={() => setIsOpen(!isOpen)}>Arts</NavLink>
             </li>
             <li className='py-3 border-b-2'>
-              <NavLink className="" to="/artist" onClick={() => setIsOpen(!isOpen)}>Artist</NavLink>
+              <NavLink className="" to="/artist" onClick={() => setIsOpen(!isOpen)}>Artists</NavLink>
             </li>
             <li className='py-3 border-b-2'>
               <NavLink className="" to="/event" onClick={() => setIsOpen(!isOpen)}>Event</NavLink>
@@ -103,7 +104,7 @@ const Navbar = () => {
           <path d="M7.5 17C9.8317 14.5578 14.1432 14.4428 16.5 17M14.4951 9.5C14.4951 10.8807 13.3742 12 11.9915 12C10.6089 12 9.48797 10.8807 9.48797 9.5C9.48797 8.11929 10.6089 7 11.9915 7C13.3742 7 14.4951 8.11929 14.4951 9.5Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
         </svg></button>
         {/* cart Icon */}
-        <button onClick={() => setIsLogin(!isLogin)}> <svg
+        <button onClick={() => setIsCardOpen(!isLogin)}> <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           width={24}
@@ -118,11 +119,13 @@ const Navbar = () => {
         </svg></button>
       </div>
       {
-        isLogin && <div className='fixed h-screen w-screen bg-black/40 backdrop-blur-sm top-0 right-0' onClick={() => setIsLogin(!isLogin)}></div>
+        isLogin && <div className='fixed h-screen w-screen bg-blue-gray-900/75 backdrop-blur-lg top-0 right-0 ' onClick={() => setIsLogin(!isLogin)}></div>
       }
       {/* login form  */}
-      {isLogin && <LoginForm />}
-    </nav>
+      {isLogin && <LoginForm handleLogin={handleLogin} />}
+
+      <CartList isCartOpen={isCartOpen} setIsCardOpen={setIsCardOpen} />
+    </nav >
 
   )
 };
